@@ -4,22 +4,20 @@
 
 WaveAchieve is a mobile application built with React Native that helps you track and analyze your swimming progress. Whether you're a beginner or a seasoned swimmer, this app provides features to monitor your training sessions, set goals, and visualize your achievements in the pool.
 
-## Features
+## Implemented Features
 
-- ...
+- /
 
 ## Planned Features
 
 - **Session Tracking:** Log your swimming sessions with details like duration, distance, strokes, and more.
 - **Progress Visualization:** Visualize your progress over time with intuitive charts and graphs.
-- - **Goal Setting:** Set personalized goals for distance, time, or specific stroke techniques to challenge yourself.
-
+- **Goal Setting:** Set personalized goals for distance, time, or specific stroke techniques to challenge yourself.
 
 ## Optional Features
 
 - **Personal Profile:** Create and manage your swimmer profile, including personal bests and achievements.
 - **Community:** Connect with fellow swimmers, share achievements, and participate in challenges.
-
 
 ## Getting Started
 
