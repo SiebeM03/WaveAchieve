@@ -6,7 +6,7 @@ WaveAchieve is a mobile application built with React Native that helps you track
 
 ## Implemented Features
 
-- /
+- 
 
 ## Planned Features
 
