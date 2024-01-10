@@ -18,6 +18,7 @@ WaveAchieve is a mobile application built with React Native that helps you track
 
 - **Personal Profile:** Create and manage your swimmer profile, including personal bests and achievements.
 - **Community:** Connect with fellow swimmers, share achievements, and participate in challenges.
+- **Achievements System:** Earn achievements (e.g.: "train 3 times in one week", ...)
 
 ## Getting Started
 
