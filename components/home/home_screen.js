@@ -1,8 +1,13 @@
-import { Button, Text, View, StyleSheet, TouchableOpacity } from 'react-native'
+import { Text, View, TouchableOpacity } from 'react-native'
+import Card from '../_reusable/card'
+import ScreenRoot from '../_reusable/screen_root'
 
 
 function GetDateElement() {
   const elements = []
+  const trainingClasses = "border-4 border-secondary bg-background"
+  const currentClasses = "bg-secondary text-black"
+  const normalClasses = "bg-background"
 
   for (let i = 0; i < 14; i += 7) {
     const row = []
@@ -16,14 +21,14 @@ function GetDateElement() {
         // Random int between 0 and 5, if 0, 1 -> training day
         if (Math.floor(Math.random() * 6) >= 2) {
           element = <Text key={ loopDate }
-                          className="rounded-full bg-gray-300 h-8 w-8 text-center leading-7.5">{ loopDate }</Text>
+                          className={ `rounded-full h-8 w-8 text-center leading-7.5 ${ normalClasses }` }>{ loopDate }</Text>
         } else {
           element = <Text key={ loopDate }
-                          className="rounded-full bg-primary text-main h-8 w-8 text-center leading-7.5">{ loopDate }</Text>
+                          className={ `rounded-full h-8 w-8 text-center leading-7.5 ${ trainingClasses }` }>{ loopDate }</Text>
         }
       } else if (loopDate === currentDate) {
         element = <Text key={ loopDate }
-                        className="rounded-full border-4 border-accent h-8 w-8 text-center leading-7.5">{ loopDate }</Text>
+                        className={ `rounded-full h-8 w-8 text-center leading-7.5 ${ currentClasses }` }>{ loopDate }</Text>
       } else {
         element = <Text key={ loopDate } className="h-8 w-8"></Text>
       }
@@ -42,32 +47,30 @@ function GetDateElement() {
 
 export default function HomeScreen({ navigation }) {
   return (
-      <View className="my-4">
-        {/* Calendar */ }
-        <View className="w-10/12 mx-auto">
-          <View className="flex flex-row justify-between">
-            <Text className="w-8 text-center">S</Text>
-            <Text className="w-8 text-center">M</Text>
-            <Text className="w-8 text-center">T</Text>
-            <Text className="w-8 text-center">W</Text>
-            <Text className="w-8 text-center">T</Text>
-            <Text className="w-8 text-center">F</Text>
-            <Text className="w-8 text-center">S</Text>
-          </View>
-          <View className="space">
-            <GetDateElement/>
-          </View>
-        </View>
-
-
-        {/*<View style={ styles.buttonContainer }>
-          <TouchableOpacity onPress={ () => navigation.navigate('TrainingDetails') }
-                            style={ styles.buttonContainer }>
-            <View style={ styles.button }>
-              <Text style={ styles.buttonText }>Create Training</Text>
+      <ScreenRoot>
+        {/* Calendar card */ }
+        <Card>
+          <View>
+            <View className="flex flex-row justify-between">
+              <Text className="w-8 text-center">S</Text>
+              <Text className="w-8 text-center">M</Text>
+              <Text className="w-8 text-center">T</Text>
+              <Text className="w-8 text-center">W</Text>
+              <Text className="w-8 text-center">T</Text>
+              <Text className="w-8 text-center">F</Text>
+              <Text className="w-8 text-center">S</Text>
             </View>
+            <View className="space">
+              <GetDateElement/>
+            </View>
+          </View>
+
+          <TouchableOpacity className="bg-primary mt-4 p-2 rounded-md"
+                            onPress={ () => navigation.navigate('NewTraining', { id: 0 }) }>
+            <Text className="text-main text-center">Create Training</Text>
           </TouchableOpacity>
-        </View>*/ }
-      </View>
+        </Card>
+
+      </ScreenRoot>
   )
 }

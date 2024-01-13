@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native'
 export default class CircleButton extends React.Component {
   render() {
     let localStyles = styles(this.props)
-
+    // TODO make tailwind
     return (
         <View style={ localStyles.container }>
           <TouchableOpacity style={ localStyles.button }
