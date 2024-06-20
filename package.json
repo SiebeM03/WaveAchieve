@@ -1,5 +1,5 @@
 {
-  "name": "swimming_tracker",
+  "name": "beverage-rating-frontend",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@apollo/client": "^3.8.9",
     "@expo/vector-icons": "^14.0.0",
     "@expo/webpack-config": "^19.0.0",
@@ -19,13 +20,23 @@
     "expo": "^51.0.12",
     "expo-status-bar": "~1.12.1",
     "graphql": "^15.8.0",
+=======
+    "@react-navigation/bottom-tabs": "^6.5.20",
+    "@react-navigation/native": "^6.1.17",
+    "expo": "^51.0.12",
+    "metro-config": "^0.80.9",
+>>>>>>> 14cd7e114b4b6487c9bb603b4f146f84de75c06e
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.2",
+<<<<<<< HEAD
     "react-native-svg": "15.2.0",
     "react-native-web": "~0.19.6",
     "recoil": "^0.7.7"
+=======
+    "react-native-web": "~0.19.6"
+>>>>>>> 14cd7e114b4b6487c9bb603b4f146f84de75c06e
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
