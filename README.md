@@ -1,51 +1,19 @@
-# WaveAchieve
-
-## Overview
-
-WaveAchieve is a mobile application built with React Native that helps you track and analyze your swimming progress. Whether you're a beginner or a seasoned swimmer, this app provides features to monitor your training sessions, set goals, and visualize your achievements in the pool.
-
-## Implemented Features
-
-- 
-
-## Planned Features
-
-- **Session Tracking:** Log your swimming sessions with details like duration, distance, strokes, and more.
-- **Progress Visualization:** Visualize your progress over time with intuitive charts and graphs.
-- **Goal Setting:** Set personalized goals for distance, time, or specific stroke techniques to challenge yourself.
-
-## Optional Features
-
-- **Personal Profile:** Create and manage your swimmer profile, including personal bests and achievements.
-- **Community:** Connect with fellow swimmers, share achievements, and participate in challenges.
-- **Achievements System:** Earn achievements (e.g.: "train 3 times in one week", ...)
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js: [Install Node.js](https://nodejs.org/)
-- Expo CLI: Install using `npm install -g expo-cli`
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/wave-achieve-app.git
-cd wave-achieve-app
+### Project structure
+Taken from and thus more explanation at: [React Native Project Structure: A Best Practices Guide](https://www.waldo.com/blog/react-native-project-structure) (type-based project structure)
 ```
-
-2. Install the dependencies
-
-```bash
-npm install
+/src
+    /api
+        /constants.js -> api configurations
+        /<name>.service.js -> api services
+    /hooks -> all custom hooks
+    /navigation -> all navigation related code
+        /stacks -> all stack navigators (e.g. ReviewStack contains ReviewOverview, ReviewDetail and NewReview screens)
+    /ui -> all code related to UI
+        /assets -> all assets
+        /components
+            /<name>.js -> reusable components
+        /screens -> all screens of the application
+            /<name> -> screen components
+    /utils -> all utility functions (e.g. reusable functions)
+    /wrappers -> all wrapper components (e.g. HOCs)
 ```
-
-3. Start the Expo development server
-
-```bash
-npm start
-```
-
-4. Use the Expo client on your mobile device to scan the QR code and run the app.

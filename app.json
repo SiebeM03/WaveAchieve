@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "swimming_tracker",
-    "slug": "swimming_tracker",
+    "name": "beverage-rating-frontend",
+    "slug": "beverage-rating-frontend",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
