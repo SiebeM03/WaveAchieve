@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 
 export const GET_TRAINING_BANNER = gql`
 query GetTrainings {
-  trainings {
+  trainings (order_by: {date:desc}) {
     id
     date
     duration
@@ -31,6 +31,9 @@ query GetTraining($id: Int!) {
       strokes {
         id
         name
+      }
+      exercise_addons {
+        add_ons_id
       }
       distance
     }

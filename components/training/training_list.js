@@ -8,6 +8,8 @@ import { trainingState } from '../../store'
 import TrainingListItem from './training_list_item'
 import { useEffect } from 'react'
 import ScreenRoot from '../_reusable/screen_root'
+import { SvgUri } from 'react-native-svg';
+
 
 export default function TrainingList({ navigation }) {
   const { data, loading, error } = useQuery(GET_TRAINING_BANNER)

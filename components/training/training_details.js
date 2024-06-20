@@ -2,11 +2,14 @@ import TodoScreen from '../todo_screen'
 import { useRecoilState } from 'recoil'
 import { trainingState, trainingUpdateModeState } from '../../store'
 import { useEffect, useState } from 'react'
-import { Button, View, Text } from 'react-native'
+import { Button, View, Text, FlatListComponent, FlatList } from 'react-native'
 import { useQuery } from '@apollo/client'
 import { GET_TRAINING } from '../../gql/queries'
 import Error from '../_reusable/messages/error'
 import Fetching from '../_reusable/messages/fetching'
+import ExerciseListItem from './exercise_list_item'
+import Separator from '../_reusable/seperator'
+
 
 export default function TrainingDetails({ route, navigation }) {
   const { id } = route.params
@@ -42,8 +45,12 @@ export default function TrainingDetails({ route, navigation }) {
   } else {
     return (
         <View className="flex-1">
-          <TodoScreen>Training details</TodoScreen>
-          <Text>{ trainingState.date }</Text>
+          <Text>Date: { trainingState.date }</Text>
+
+          <FlatList data={ trainingState.exercises }
+                    renderItem={ ({ item }) => <ExerciseListItem exercise={ item }/> }
+                    keyExtractor={ (item, index) => index }
+                    ItemSeparatorComponent={ Separator }/>
           <Button title={ "Edit training" } onPress={ () => setUpdateMode(true) }/>
         </View>
     )

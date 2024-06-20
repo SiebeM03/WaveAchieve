@@ -11,6 +11,8 @@ import TodoScreen from './components/todo_screen'
 
 import HomeStackElement from './components/home/home_stack'
 import TrainingStackElement from './components/training/training_stack'
+import { Image, Text } from 'react-native'
+import { SvgUri } from 'react-native-svg'
 
 
 const client = new ApolloClient({

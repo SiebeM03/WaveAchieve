@@ -2,7 +2,6 @@ import { Text, View, TouchableOpacity } from 'react-native'
 import Card from '../_reusable/card'
 import ScreenRoot from '../_reusable/screen_root'
 
-
 function GetDateElement() {
   const elements = []
   const trainingClasses = "border-4 border-secondary bg-background"
@@ -46,6 +45,7 @@ function GetDateElement() {
 }
 
 export default function HomeScreen({ navigation }) {
+
   return (
       <ScreenRoot>
         {/* Calendar card */ }
