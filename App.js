@@ -14,7 +14,6 @@ import TrainingStackElement from './components/training/training_stack'
 import { Image, Text } from 'react-native'
 import { SvgUri } from 'react-native-svg'
 
-
 const client = new ApolloClient({
   uri: configData.qlendpoint,
   headers: {
